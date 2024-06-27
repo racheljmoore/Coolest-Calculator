@@ -316,25 +316,9 @@ namespace Coolest_Calculator
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Calculator";
             load += Form1_Load
-            ((System.ComponentModel.ISupportInitialize)Calculator_Container).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
-        }
+private static void button_divide_Click(object sender, EventArgs e) => throw new NotImplementedException();
 
-        private object Form1_Load(ISupportInitialize calculator_Container)
-        {
-            throw new NotImplementedException();
-        }
 
-        private void button_decimal_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void button_divide_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
 
         private Button C;
         public Button button_1;
