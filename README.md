@@ -1,2 +1,0 @@
-# Coolest-Calculator
-its cool
