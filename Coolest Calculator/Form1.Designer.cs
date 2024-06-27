@@ -1,4 +1,7 @@
-﻿namespace Coolest_Calculator
+﻿
+using System.ComponentModel;
+
+namespace Coolest_Calculator
 {
     partial class Form1
     {
@@ -20,13 +23,22 @@
             base.Dispose(disposing);
         }
 
+        private EventHandler GetLoad()
+        {
+            return Load;
+        }
+
+        private EventHandler GetLoad(EventHandler load) => load;
+
+        private EventHandler GetLoad(EventHandler load) => load;
+
         #region Windows Form Designer generated code
 
         /// <summary>
         ///  Required method for Designer support - do not modify
         ///  the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        private void InitializeComponent(EventHandler load)
         {
             button_1 = new Button();
             button_2 = new Button();
@@ -47,6 +59,8 @@
             Results = new TextBox();
             Clear = new Button();
             button_equals = new Button();
+            button_decimal = new Button();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)Calculator_Container).BeginInit();
             SuspendLayout();
             // 
@@ -86,9 +100,9 @@
             // button_0
             // 
             button_0.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            button_0.Location = new Point(49, 298);
+            button_0.Location = new Point(92, 298);
             button_0.Name = "button_0";
-            button_0.Size = new Size(123, 27);
+            button_0.Size = new Size(37, 27);
             button_0.TabIndex = 4;
             button_0.Text = "0";
             button_0.UseVisualStyleBackColor = true;
@@ -217,13 +231,14 @@
             button_divide.Text = "/";
             button_divide.UseVisualStyleBackColor = true;
             button_divide.Click += button_divide_Click;
+
             // 
             // Results
             // 
             Results.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Results.Location = new Point(92, 166);
+            Results.Location = new Point(49, 116);
             Results.Name = "Results";
-            Results.Size = new Size(126, 29);
+            Results.Size = new Size(169, 29);
             Results.TabIndex = 10;
             Results.Text = "Piggy Bank";
             Results.TextChanged += Results_TextChanged;
@@ -232,7 +247,7 @@
             // 
             Clear.Location = new Point(49, 168);
             Clear.Name = "Clear";
-            Clear.Size = new Size(40, 27);
+            Clear.Size = new Size(37, 27);
             Clear.TabIndex = 7;
             Clear.Text = "CE";
             Clear.UseVisualStyleBackColor = true;
@@ -244,9 +259,31 @@
             button_equals.Name = "button_equals";
             button_equals.Size = new Size(169, 24);
             button_equals.TabIndex = 4;
-            button_equals.Text = "Equals";
+            button_equals.Text = "=";
             button_equals.UseVisualStyleBackColor = true;
             button_equals.Click += button_equals_Click;
+            // 
+            // button_decimal
+            // 
+            button_decimal.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            button_decimal.Location = new Point(135, 298);
+            button_decimal.Name = "button_decimal";
+            button_decimal.Size = new Size(37, 27);
+            button_decimal.TabIndex = 4;
+            button_decimal.Text = ".";
+            button_decimal.UseVisualStyleBackColor = true;
+            button_decimal.Click += button_decimal_Click;
+            // 
+            // button3
+            // 
+            button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            button3.Location = new Point(49, 298);
+            button3.Name = "button3";
+            button3.Size = new Size(37, 27);
+            button3.TabIndex = 4;
+            button3.Text = "%";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button_0_Click;
             // 
             // Form1
             // 
@@ -261,6 +298,8 @@
             Controls.Add(button_plus);
             Controls.Add(Calculator);
             Controls.Add(button_equals);
+            Controls.Add(button3);
+            Controls.Add(button_decimal);
             Controls.Add(button_0);
             Controls.Add(button_9);
             Controls.Add(button_6);
@@ -276,21 +315,27 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Calculator";
-            Load += Form1_Load;
+            load += Form1_Load
             ((System.ComponentModel.ISupportInitialize)Calculator_Container).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
-        #endregion
-        private Button button2;
-        private Button button5;
-        private Button button7;
-        private Button button9;
-        private DataGridView dataGridView1;
-        private Button button12;
-        private TextBox textBox1;
-        private Button button14;
+        private object Form1_Load(ISupportInitialize calculator_Container)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void button_decimal_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void button_divide_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         private Button C;
         public Button button_1;
         public Button button_2;
@@ -311,5 +356,8 @@
         public Label Calculator;
         public DataGridView Calculator_Container;
         public Button button_0;
+        public Button button_decimal;
+        public Button button3;
+
+        public static object Form1_Load { get; private set; }
     }
-}

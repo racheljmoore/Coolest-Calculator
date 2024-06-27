@@ -1,4 +1,6 @@
+using System;
 using System.Diagnostics;
+using System.Security.Cryptography.X509Certificates;
 using static System.Windows.Forms.AxHost;
 
 namespace Coolest_Calculator
@@ -10,7 +12,7 @@ namespace Coolest_Calculator
         private double _firstNumber;
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent(GetLoad(GetLoad(GetLoad())));
             _state = CalculatorState.Result;
             _firstNumber = 0.0d;
             //by adding a d at the end of the number source allowed us to represent fractional
@@ -19,8 +21,8 @@ namespace Coolest_Calculator
             //the user entering the
             //second number because of the first number identifier
             //defaults
-    
- 
+
+
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -43,7 +45,7 @@ namespace Coolest_Calculator
             return ToString();
         }
         private void ChangeCalculatorState(CalculatorState state)
-            //setting the temp state into our perminate global state
+        //setting the temp state into our perminate global state
         {
             _state = state;
             if (double.TryParse(Results.Text, out double result))
@@ -54,7 +56,7 @@ namespace Coolest_Calculator
                 //creating a line of code to tell the calculator when we input
                 //the first number and choose our function it results in a zero (as a holding space)
                 //for the second number prior to recieving the solution
-                //Since number is not recoginized value by putting it in " identifidied it as an input
+                //Since number is not recoginized D by putting it in " identifidied it as an input
 
             }
 
@@ -121,10 +123,21 @@ namespace Coolest_Calculator
 
         private void button_0_Click(object sender, EventArgs e)
         {
+            if (double.TryParse(Results.Text, out double result))
+            {
+                double finalResult = 0.0d;
+                switch (_state)
+                {
 
-            AddNumberDisplay(0);
 
-            //adding response to each number in the calculator 
+                    case CalculatorState.Addition:
+                        finalResult = _firstNumber + result;
+                        Results.Text = finalResult.ToString();
+                        break;
+                        AddNumberDisplay(0);
+                }
+            }
+//adding response to each number in the calculator 
 
         }
 
@@ -147,6 +160,8 @@ namespace Coolest_Calculator
             if (double.TryParse(Results.Text, out double result))
             {
                 double finalResult = 0.0d;
+
+
                 switch (_state)
                 {
 
@@ -169,12 +184,15 @@ namespace Coolest_Calculator
                         break;
                     case CalculatorState.Result:
                     default:
-                        break;
+
+
+                        Results.Text = _firstNumber.ToString(); break;
                 }
+
             }
 
         }
-        //
+
         private void button_subtract_Click(object sender, EventArgs e)
         {
             ChangeCalculatorState(CalculatorState.Subtraction);
@@ -183,20 +201,12 @@ namespace Coolest_Calculator
         private void button_multiply_Click(object sender, EventArgs e)
         {
             ChangeCalculatorState(CalculatorState.Multiply);
-        }
-
-        private void button_divide_Click(object sender, EventArgs e)
-        {
-            ChangeCalculatorState(CalculatorState.Divide);
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
         }
     }
 }
 
 
+          
 
-    
+       
