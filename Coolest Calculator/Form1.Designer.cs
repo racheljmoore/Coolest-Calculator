@@ -47,13 +47,14 @@
             Results = new TextBox();
             Clear = new Button();
             button_equals = new Button();
+            button_decimal = new Button();
             ((System.ComponentModel.ISupportInitialize)Calculator_Container).BeginInit();
             SuspendLayout();
             // 
             // button_1
             // 
             button_1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button_1.Location = new Point(49, 265);
+            button_1.Location = new Point(49, 242);
             button_1.Name = "button_1";
             button_1.Size = new Size(37, 27);
             button_1.TabIndex = 4;
@@ -64,7 +65,7 @@
             // button_2
             // 
             button_2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            button_2.Location = new Point(92, 265);
+            button_2.Location = new Point(92, 242);
             button_2.Name = "button_2";
             button_2.Size = new Size(37, 27);
             button_2.TabIndex = 4;
@@ -75,7 +76,7 @@
             // button_3
             // 
             button_3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            button_3.Location = new Point(135, 265);
+            button_3.Location = new Point(135, 242);
             button_3.Name = "button_3";
             button_3.Size = new Size(37, 27);
             button_3.TabIndex = 4;
@@ -86,9 +87,9 @@
             // button_0
             // 
             button_0.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            button_0.Location = new Point(49, 298);
+            button_0.Location = new Point(49, 275);
             button_0.Name = "button_0";
-            button_0.Size = new Size(123, 27);
+            button_0.Size = new Size(80, 27);
             button_0.TabIndex = 4;
             button_0.Text = "0";
             button_0.UseVisualStyleBackColor = true;
@@ -97,7 +98,7 @@
             // button_4
             // 
             button_4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            button_4.Location = new Point(49, 232);
+            button_4.Location = new Point(49, 209);
             button_4.Name = "button_4";
             button_4.Size = new Size(37, 27);
             button_4.TabIndex = 4;
@@ -108,7 +109,7 @@
             // button_5
             // 
             button_5.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            button_5.Location = new Point(92, 232);
+            button_5.Location = new Point(92, 209);
             button_5.Name = "button_5";
             button_5.Size = new Size(37, 27);
             button_5.TabIndex = 4;
@@ -119,7 +120,7 @@
             // button_6
             // 
             button_6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            button_6.Location = new Point(135, 232);
+            button_6.Location = new Point(135, 209);
             button_6.Name = "button_6";
             button_6.Size = new Size(37, 27);
             button_6.TabIndex = 4;
@@ -130,7 +131,7 @@
             // button_7
             // 
             button_7.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            button_7.Location = new Point(49, 199);
+            button_7.Location = new Point(49, 176);
             button_7.Name = "button_7";
             button_7.Size = new Size(37, 27);
             button_7.TabIndex = 4;
@@ -141,7 +142,7 @@
             // button_8
             // 
             button_8.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            button_8.Location = new Point(92, 199);
+            button_8.Location = new Point(92, 176);
             button_8.Name = "button_8";
             button_8.Size = new Size(37, 27);
             button_8.TabIndex = 4;
@@ -152,7 +153,7 @@
             // button_9
             // 
             button_9.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            button_9.Location = new Point(135, 199);
+            button_9.Location = new Point(135, 176);
             button_9.Name = "button_9";
             button_9.Size = new Size(37, 27);
             button_9.TabIndex = 4;
@@ -171,7 +172,7 @@
             // 
             // button_plus
             // 
-            button_plus.Location = new Point(178, 199);
+            button_plus.Location = new Point(178, 176);
             button_plus.Name = "button_plus";
             button_plus.Size = new Size(40, 27);
             button_plus.TabIndex = 7;
@@ -190,7 +191,7 @@
             // 
             // button_subtract
             // 
-            button_subtract.Location = new Point(178, 232);
+            button_subtract.Location = new Point(178, 209);
             button_subtract.Name = "button_subtract";
             button_subtract.Size = new Size(40, 27);
             button_subtract.TabIndex = 7;
@@ -200,7 +201,7 @@
             // 
             // button_multiply
             // 
-            button_multiply.Location = new Point(178, 265);
+            button_multiply.Location = new Point(178, 242);
             button_multiply.Name = "button_multiply";
             button_multiply.Size = new Size(40, 27);
             button_multiply.TabIndex = 7;
@@ -210,7 +211,7 @@
             // 
             // button_divide
             // 
-            button_divide.Location = new Point(178, 298);
+            button_divide.Location = new Point(178, 275);
             button_divide.Name = "button_divide";
             button_divide.Size = new Size(40, 27);
             button_divide.TabIndex = 7;
@@ -221,7 +222,7 @@
             // Results
             // 
             Results.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Results.Location = new Point(92, 166);
+            Results.Location = new Point(75, 103);
             Results.Name = "Results";
             Results.Size = new Size(126, 29);
             Results.TabIndex = 10;
@@ -230,7 +231,7 @@
             // 
             // Clear
             // 
-            Clear.Location = new Point(49, 168);
+            Clear.Location = new Point(49, 143);
             Clear.Name = "Clear";
             Clear.Size = new Size(40, 27);
             Clear.TabIndex = 7;
@@ -248,6 +249,16 @@
             button_equals.UseVisualStyleBackColor = true;
             button_equals.Click += button_equals_Click;
             // 
+            // button_decimal
+            // 
+            button_decimal.Location = new Point(132, 275);
+            button_decimal.Name = "button_decimal";
+            button_decimal.Size = new Size(40, 27);
+            button_decimal.TabIndex = 7;
+            button_decimal.Text = ".";
+            button_decimal.UseVisualStyleBackColor = true;
+            button_decimal.Click += button_decimal_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -255,6 +266,7 @@
             ClientSize = new Size(270, 422);
             Controls.Add(Results);
             Controls.Add(button_subtract);
+            Controls.Add(button_decimal);
             Controls.Add(button_divide);
             Controls.Add(button_multiply);
             Controls.Add(Clear);
@@ -311,5 +323,6 @@
         public Label Calculator;
         public DataGridView Calculator_Container;
         public Button button_0;
+        public Button button_decimal;
     }
 }

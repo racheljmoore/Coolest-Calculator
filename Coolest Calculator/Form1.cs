@@ -19,8 +19,8 @@ namespace Coolest_Calculator
             //the user entering the
             //second number because of the first number identifier
             //defaults
-    
- 
+
+
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -43,7 +43,7 @@ namespace Coolest_Calculator
             return ToString();
         }
         private void ChangeCalculatorState(CalculatorState state)
-            //setting the temp state into our perminate global state
+        //setting the temp state into our perminate global state
         {
             _state = state;
             if (double.TryParse(Results.Text, out double result))
@@ -59,8 +59,20 @@ namespace Coolest_Calculator
             }
 
         }
+        private void AddDecimalDisplay()
+        {
+            if (!double.TryParse(Results.Text, out double _))
+            {
+                Results.Text = "0";
+            }
+            if (Results.Text.Contains('.'))
+            {
+                return;
 
-        private void AddNumberDisplay(int number)
+            }
+            Results.Text += ".";
+        }
+        private void AddNumberDisplay(int number) 
         {
             if (double.TryParse(Results.Text, out double result))
             {
@@ -192,6 +204,12 @@ namespace Coolest_Calculator
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void button_decimal_Click(object sender, EventArgs e)
+        {
+            AddDecimalDisplay();    
 
         }
     }
