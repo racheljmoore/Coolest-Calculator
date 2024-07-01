@@ -57,9 +57,15 @@ namespace Coolest_Calculator
                 //Since number is not recoginized value by putting it in " identifidied it as an input
 
             }
-
+//Inclcuding a decimal point
         }
-        private void AddDecimalDisplay()
+
+        private string GetV( )
+        {
+            return Results.Text += ".";
+        }
+
+        private void AddDecimalDisplay(string v)
         {
             if (!double.TryParse(Results.Text, out double _))
             {
@@ -70,7 +76,7 @@ namespace Coolest_Calculator
                 return;
 
             }
-            Results.Text += ".";
+
         }
         private void AddNumberDisplay(int number) 
         {
@@ -82,7 +88,11 @@ namespace Coolest_Calculator
             else
             {
                 Results.Text = number.ToString();
-            }
+            }                    
+
+
+
+        
         }
         private void button_1_Click(object sender, EventArgs e)
         {
@@ -118,6 +128,7 @@ namespace Coolest_Calculator
 
         private void button_7_Click(object sender, EventArgs e)
         {
+            
             AddNumberDisplay(7);
         }
 
@@ -207,11 +218,7 @@ namespace Coolest_Calculator
 
         }
 
-        private void button_decimal_Click(object sender, EventArgs e)
-        {
-            AddDecimalDisplay();    
-
-        }
+        private void button_decimal_Click(object sender, EventArgs e) => AddDecimalDisplay(GetV());
     }
 }
 

@@ -53,135 +53,151 @@
             // 
             // button_1
             // 
+            button_1.BackColor = Color.FromArgb(255, 192, 128);
             button_1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button_1.Location = new Point(49, 242);
             button_1.Name = "button_1";
             button_1.Size = new Size(37, 27);
             button_1.TabIndex = 4;
             button_1.Text = "1";
-            button_1.UseVisualStyleBackColor = true;
+            button_1.UseVisualStyleBackColor = false;
             button_1.Click += button_1_Click;
             // 
             // button_2
             // 
+            button_2.BackColor = Color.FromArgb(255, 192, 128);
             button_2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button_2.Location = new Point(92, 242);
             button_2.Name = "button_2";
             button_2.Size = new Size(37, 27);
             button_2.TabIndex = 4;
             button_2.Text = "2";
-            button_2.UseVisualStyleBackColor = true;
+            button_2.UseVisualStyleBackColor = false;
             button_2.Click += button_2_Click;
             // 
             // button_3
             // 
+            button_3.BackColor = Color.FromArgb(255, 192, 128);
             button_3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button_3.Location = new Point(135, 242);
             button_3.Name = "button_3";
             button_3.Size = new Size(37, 27);
             button_3.TabIndex = 4;
             button_3.Text = "3";
-            button_3.UseVisualStyleBackColor = true;
+            button_3.UseVisualStyleBackColor = false;
             button_3.Click += button_3_Click;
             // 
             // button_0
             // 
+            button_0.BackColor = Color.FromArgb(255, 192, 128);
             button_0.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button_0.Location = new Point(49, 275);
             button_0.Name = "button_0";
             button_0.Size = new Size(80, 27);
             button_0.TabIndex = 4;
             button_0.Text = "0";
-            button_0.UseVisualStyleBackColor = true;
+            button_0.UseVisualStyleBackColor = false;
             button_0.Click += button_0_Click;
             // 
             // button_4
             // 
+            button_4.BackColor = Color.FromArgb(255, 192, 128);
             button_4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button_4.Location = new Point(49, 209);
             button_4.Name = "button_4";
             button_4.Size = new Size(37, 27);
             button_4.TabIndex = 4;
             button_4.Text = "4";
-            button_4.UseVisualStyleBackColor = true;
+            button_4.UseVisualStyleBackColor = false;
             button_4.Click += button_4_Click;
             // 
             // button_5
             // 
+            button_5.BackColor = Color.FromArgb(255, 192, 128);
             button_5.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button_5.Location = new Point(92, 209);
             button_5.Name = "button_5";
             button_5.Size = new Size(37, 27);
             button_5.TabIndex = 4;
             button_5.Text = "5";
-            button_5.UseVisualStyleBackColor = true;
+            button_5.UseVisualStyleBackColor = false;
             button_5.Click += button_5_Click;
             // 
             // button_6
             // 
+            button_6.BackColor = Color.FromArgb(255, 192, 128);
             button_6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button_6.Location = new Point(135, 209);
             button_6.Name = "button_6";
             button_6.Size = new Size(37, 27);
             button_6.TabIndex = 4;
             button_6.Text = "6";
-            button_6.UseVisualStyleBackColor = true;
+            button_6.UseVisualStyleBackColor = false;
             button_6.Click += button_6_Click;
             // 
             // button_7
             // 
+            button_7.BackColor = Color.FromArgb(255, 192, 128);
             button_7.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button_7.Location = new Point(49, 176);
             button_7.Name = "button_7";
             button_7.Size = new Size(37, 27);
             button_7.TabIndex = 4;
             button_7.Text = "7";
-            button_7.UseVisualStyleBackColor = true;
+            button_7.UseVisualStyleBackColor = false;
             button_7.Click += button_7_Click;
             // 
             // button_8
             // 
+            button_8.BackColor = Color.FromArgb(255, 192, 128);
             button_8.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button_8.Location = new Point(92, 176);
             button_8.Name = "button_8";
             button_8.Size = new Size(37, 27);
             button_8.TabIndex = 4;
             button_8.Text = "8";
-            button_8.UseVisualStyleBackColor = true;
+            button_8.UseVisualStyleBackColor = false;
             button_8.Click += button_8_Click;
             // 
             // button_9
             // 
+            button_9.BackColor = Color.FromArgb(255, 192, 128);
             button_9.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button_9.Location = new Point(135, 176);
             button_9.Name = "button_9";
             button_9.Size = new Size(37, 27);
             button_9.TabIndex = 4;
             button_9.Text = "9";
-            button_9.UseVisualStyleBackColor = true;
+            button_9.UseVisualStyleBackColor = false;
             button_9.Click += button_9_Click;
             // 
             // Calculator
             // 
             Calculator.AutoSize = true;
+            Calculator.BackColor = Color.Black;
+            Calculator.Font = new Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Calculator.ForeColor = SystemColors.ButtonFace;
             Calculator.Location = new Point(102, 77);
             Calculator.Name = "Calculator";
-            Calculator.Size = new Size(61, 15);
+            Calculator.Size = new Size(63, 15);
             Calculator.TabIndex = 6;
             Calculator.Text = "Calculator";
             // 
             // button_plus
             // 
+            button_plus.BackColor = Color.FromArgb(0, 192, 192);
+            button_plus.ForeColor = Color.Black;
             button_plus.Location = new Point(178, 176);
             button_plus.Name = "button_plus";
             button_plus.Size = new Size(40, 27);
             button_plus.TabIndex = 7;
             button_plus.Text = "+";
-            button_plus.UseVisualStyleBackColor = true;
+            button_plus.UseVisualStyleBackColor = false;
             button_plus.Click += button_plus_Click;
             // 
             // Calculator_Container
             // 
+            Calculator_Container.BackgroundColor = SystemColors.Desktop;
             Calculator_Container.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             Calculator_Container.Location = new Point(24, 62);
             Calculator_Container.Name = "Calculator_Container";
@@ -191,72 +207,81 @@
             // 
             // button_subtract
             // 
+            button_subtract.BackColor = Color.FromArgb(0, 192, 192);
+            button_subtract.ForeColor = Color.Black;
             button_subtract.Location = new Point(178, 209);
             button_subtract.Name = "button_subtract";
             button_subtract.Size = new Size(40, 27);
             button_subtract.TabIndex = 7;
             button_subtract.Text = "-";
-            button_subtract.UseVisualStyleBackColor = true;
+            button_subtract.UseVisualStyleBackColor = false;
             button_subtract.Click += button_subtract_Click;
             // 
             // button_multiply
             // 
+            button_multiply.BackColor = Color.FromArgb(0, 192, 192);
+            button_multiply.ForeColor = Color.Black;
             button_multiply.Location = new Point(178, 242);
             button_multiply.Name = "button_multiply";
             button_multiply.Size = new Size(40, 27);
             button_multiply.TabIndex = 7;
             button_multiply.Text = "x";
-            button_multiply.UseVisualStyleBackColor = true;
+            button_multiply.UseVisualStyleBackColor = false;
             button_multiply.Click += button_multiply_Click;
             // 
             // button_divide
             // 
+            button_divide.BackColor = Color.FromArgb(0, 192, 192);
+            button_divide.ForeColor = Color.Black;
             button_divide.Location = new Point(178, 275);
             button_divide.Name = "button_divide";
             button_divide.Size = new Size(40, 27);
             button_divide.TabIndex = 7;
             button_divide.Text = "/";
-            button_divide.UseVisualStyleBackColor = true;
+            button_divide.UseVisualStyleBackColor = false;
             button_divide.Click += button_divide_Click;
             // 
             // Results
             // 
-            Results.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Results.Location = new Point(75, 103);
+            Results.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Results.Location = new Point(49, 103);
             Results.Name = "Results";
-            Results.Size = new Size(126, 29);
+            Results.Size = new Size(169, 26);
             Results.TabIndex = 10;
             Results.Text = "Piggy Bank";
             Results.TextChanged += Results_TextChanged;
             // 
             // Clear
             // 
+            Clear.BackColor = Color.FromArgb(255, 192, 255);
             Clear.Location = new Point(49, 143);
             Clear.Name = "Clear";
             Clear.Size = new Size(40, 27);
             Clear.TabIndex = 7;
             Clear.Text = "CE";
-            Clear.UseVisualStyleBackColor = true;
+            Clear.UseVisualStyleBackColor = false;
             Clear.Click += Clear_Click;
             // 
             // button_equals
             // 
-            button_equals.Location = new Point(49, 327);
+            button_equals.BackColor = Color.FromArgb(255, 128, 128);
+            button_equals.Location = new Point(49, 320);
             button_equals.Name = "button_equals";
             button_equals.Size = new Size(169, 24);
             button_equals.TabIndex = 4;
             button_equals.Text = "Equals";
-            button_equals.UseVisualStyleBackColor = true;
+            button_equals.UseVisualStyleBackColor = false;
             button_equals.Click += button_equals_Click;
             // 
             // button_decimal
             // 
+            button_decimal.BackColor = Color.FromArgb(255, 255, 192);
             button_decimal.Location = new Point(132, 275);
             button_decimal.Name = "button_decimal";
             button_decimal.Size = new Size(40, 27);
             button_decimal.TabIndex = 7;
             button_decimal.Text = ".";
-            button_decimal.UseVisualStyleBackColor = true;
+            button_decimal.UseVisualStyleBackColor = false;
             button_decimal.Click += button_decimal_Click;
             // 
             // Form1
